@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/moisesdias/Downloads/SO/ping-pong-os---projetos-20171129/p00/queue.c
+queue.h
+/home/moisesdias/Downloads/SO/ping-pong-os---projetos-20171129/p00/queue.h
+assert.h
+-
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+
+/home/moisesdias/Downloads/SO/ping-pong-os---projetos-20171129/p00/queue.h
+

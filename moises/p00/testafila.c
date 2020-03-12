@@ -79,7 +79,7 @@ int fila_correta (filaint_t *fila)
          ; // ponteiro ok
       else
       {
-         printf ("ERRO: ponteiros errados ->next ou ->next->prev\n") ;
+         printf ("first: ponteiros errados ->next ou ->next->prev\n") ;
          return 0 ;
       }
 
@@ -88,7 +88,7 @@ int fila_correta (filaint_t *fila)
          ; // ponteiro ok
       else
       {
-         printf ("ERRO: ponteiros errados ->prev ou ->prev->next\n") ;
+         printf ("2: ponteiros errados ->prev ou ->prev->next\n") ;
          return 0 ;
       }
       aux = aux->next ;
@@ -117,6 +117,7 @@ int main (int argc, char **argv, char **envp)
 
    // Teste: inserir N elemementos na fila e verificar a estrutura
    printf ("Testando insercao de %d elementos...\n", N) ;
+
    fila0 = NULL ;
    for (i=0; i<N; i++)
    {
@@ -151,7 +152,8 @@ int main (int argc, char **argv, char **envp)
    while (i<N)
    {
       aux = fila0 ;
-      queue_remove ((queue_t**) &fila0, (queue_t*) aux) ;
+      printf("tamanho do role %d\n", queue_size ((queue_t*) fila0));
+      queue_remove ((queue_t**) &fila0, (queue_t*) aux) ;      
       assert (fila_correta (fila0)) ;  // estrutura continua correta
       assert (aux->id == i) ;            // testa ordem do elemento removido
       assert (aux->prev == NULL) ;       // testa elemento removido
@@ -171,6 +173,7 @@ int main (int argc, char **argv, char **envp)
    i=0 ;
    while (i<N)
    {
+       printf("tamanho do segundo role %d\n", queue_size ((queue_t*) fila0));
       aux = fila0->next ;
       queue_remove ((queue_t**) &fila0, (queue_t*) aux) ;
       assert (fila_correta (fila0)) ;  // estrutura continua correta

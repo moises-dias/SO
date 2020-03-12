@@ -3,6 +3,8 @@
 // by Carlos Maziero, DAINF/UTFPR, maio/2013
 //------------------------------------------------------------------------------
 
+
+
 #ifndef __QUEUE__
 #define __QUEUE__
 
